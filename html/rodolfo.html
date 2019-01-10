@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+	Abrir la consola para ver la magia.
+
+
+	<script type="text/javascript">
+
+//=========================================================================
+//----> Torre de asteriscos
+
+		// Se crea la variable de cuantos niveles serán
+		let niveles = 10;
+
+		// Se hace un for por la cantidad de niveles que habrác
+		for (let i=1; i<=niveles; i++)
+		{
+			// Se crea la variable de fila, esta es la que imprimirá los *
+			let fila = '';
+			// Se tiene que correr otro for en donde corra la cantidad de veces
+			// en las que "i" va en ese momento
+			for (let j=1; j<=i; j++)
+			{
+				// Se le agrega al string un "*" por cada que pase
+				fila = fila+'*';
+			}
+			// Se imprime la variable que tiene los "*" la cual se destruye en este momento
+			console.log(fila);
+		}
+
+//=========================================================================
+//----> Fibonacci
+
+		// Variables con la cantidad de veces que correra, la cantidad pasada y antepasada
+		let cantidad = 10;
+		let pasado = 1;
+		let antepasado = 0;
+
+		for (let i=0; i<cantidad; i++)
+		{
+			// Primero de debe de correr el numero pasado
+			console.log(pasado);
+			// Se hace la suma actual para que no afecte a las igualaciones
+			let actual = pasado + antepasado;
+			// Antepasado pasa a ser el pasado
+			antepasado = pasado;
+			// Pasado pasa a ser el actual
+			pasado = actual;
+		}
+
+
+	</script>
+</body>
+</html>
